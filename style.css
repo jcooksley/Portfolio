@@ -3,27 +3,79 @@
     padding: 0px;
     box-sizing: border-box;
 }
-img {max-width:20%;}
-nav{
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+/*start nav*/
+
+nav {
+    background: #000;
+    color: white;
     display: flex;
-    height: 20px;
+    justify-content: space-between;
 }
 
-.hamburger{
-}
-
-.links{
+nav .mainMenu {
+    z-index: 999;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
     display: none;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: flex;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 
-nav div:target{
-    display:block;
-    
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: block;
 }
 
 
+nav .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
 
+.icons i {
+    display: inline-block;
+    padding: 12px;
+}
+
+nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*end nav*/
 
 .title{
     margin-top: 30px;
@@ -54,6 +106,7 @@ nav div:target{
     align-items: center;
     flex-basis: 50px;
     flex-wrap: wrap;
+
 }
 
 .blog-card{
@@ -71,3 +124,61 @@ nav div:target{
 .blog-subheading{
     background-color: fuchsia;
 }
+
+.About-Face{
+    display:flex;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+
+}
+
+/* project cards */
+.project-cards
+{
+    display: grid;
+}
+
+.card {
+    background-color: transparent;
+    width: 80%px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+    margin: 10px;
+  }
+  
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+ 
+  .card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+ 
+  .card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }

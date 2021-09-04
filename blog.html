@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- my style sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- style sheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 </head>
 <body>
     <nav>
-        <a href="/resume.html">Resume</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/about.html">About</a>
+        <div class="logo"><h1>Jack</h1></div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work/Study</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+        </ul>
     </nav>
+    
     <div class="container">
         <div class="blog-card">
             <div class="blog-title">
@@ -23,5 +32,6 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
