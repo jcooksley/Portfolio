@@ -313,7 +313,7 @@ nav .logo {
 /* Tablet */
  @media(min-width: 420px) and (max-width: 770px){
     nav{
-        justify-content: flex-start;
+        justify-content: center;
     }
     nav .mainMenu {
         height: 80px;
